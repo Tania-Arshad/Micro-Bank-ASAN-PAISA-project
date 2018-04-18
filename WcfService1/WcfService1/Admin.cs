@@ -7,7 +7,7 @@ namespace WcfService1
 {
     public class Admin
     {
-        string username = "manager";
+        string username = "Manager";
         string password = "grand*11";
         public string getusername()
         {
