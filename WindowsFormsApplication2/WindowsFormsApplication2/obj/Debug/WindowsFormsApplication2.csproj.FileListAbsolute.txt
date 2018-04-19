@@ -8,3 +8,9 @@ C:\Users\DELL\Desktop\WindowsFormsApplication2\WindowsFormsApplication2\bin\Debu
 C:\Users\DELL\Desktop\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.adminLogin.resources
 C:\Users\DELL\Desktop\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.exe
 C:\Users\DELL\Desktop\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.pdb
+D:\asan paisa2\Micro-Bank-ASAN-PAISA-project\WindowsFormsApplication2\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe.config
+D:\asan paisa2\Micro-Bank-ASAN-PAISA-project\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.exe
+D:\asan paisa2\Micro-Bank-ASAN-PAISA-project\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.pdb
+C:\Users\Aneesa\Desktop\asan paisa2\Micro-Bank-ASAN-PAISA-project\WindowsFormsApplication2\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe.config
+C:\Users\Aneesa\Desktop\asan paisa2\Micro-Bank-ASAN-PAISA-project\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.exe
+C:\Users\Aneesa\Desktop\asan paisa2\Micro-Bank-ASAN-PAISA-project\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.pdb
