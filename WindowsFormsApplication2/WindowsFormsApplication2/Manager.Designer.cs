@@ -28,19 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.cmdRegister = new System.Windows.Forms.Button();
+            this.cmdRegister_Customer = new System.Windows.Forms.Button();
             this.cmdData = new System.Windows.Forms.Button();
             this.lnkSignOut = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
-            // cmdRegister
+            // cmdRegister_Customer
             // 
-            this.cmdRegister.Location = new System.Drawing.Point(63, 29);
-            this.cmdRegister.Name = "cmdRegister";
-            this.cmdRegister.Size = new System.Drawing.Size(157, 23);
-            this.cmdRegister.TabIndex = 0;
-            this.cmdRegister.Text = "Register Customer";
-            this.cmdRegister.UseVisualStyleBackColor = true;
+            this.cmdRegister_Customer.Location = new System.Drawing.Point(63, 29);
+            this.cmdRegister_Customer.Name = "cmdRegister_Customer";
+            this.cmdRegister_Customer.Size = new System.Drawing.Size(157, 28);
+            this.cmdRegister_Customer.TabIndex = 0;
+            this.cmdRegister_Customer.Text = "Register_Customer";
+            this.cmdRegister_Customer.UseVisualStyleBackColor = true;
+            this.cmdRegister_Customer.Click += new System.EventHandler(this.cmdRegister_Click);
             // 
             // cmdData
             // 
@@ -69,7 +70,7 @@
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.Controls.Add(this.lnkSignOut);
             this.Controls.Add(this.cmdData);
-            this.Controls.Add(this.cmdRegister);
+            this.Controls.Add(this.cmdRegister_Customer);
             this.Name = "Admin";
             this.Text = "Admin";
             this.Load += new System.EventHandler(this.Admin_Load);
@@ -80,7 +81,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button cmdRegister;
+        private System.Windows.Forms.Button cmdRegister_Customer;
         private System.Windows.Forms.Button cmdData;
         private System.Windows.Forms.LinkLabel lnkSignOut;
     }

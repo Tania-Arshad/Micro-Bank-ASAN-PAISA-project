@@ -28,5 +28,12 @@ namespace WindowsFormsApplication2
         {
 
         }
+
+        private void cmdRegister_Click(object sender, EventArgs e)
+        {
+            Register_Customer form1 = new Register_Customer();
+            this.Hide();
+            form1.Show();
+        }
     }
 }
