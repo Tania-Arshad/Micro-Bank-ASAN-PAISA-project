@@ -33,3 +33,6 @@ C:\Users\Tania\Desktop\New folder\Micro-Bank-ASAN-PAISA-project\WindowsFormsAppl
 C:\Users\Tania\Desktop\New folder\Micro-Bank-ASAN-PAISA-project\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Properties.Resources.resources
 C:\Users\Tania\Desktop\New folder\Micro-Bank-ASAN-PAISA-project\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Register_Customer.resources
 C:\Users\Tania\Desktop\New folder\Micro-Bank-ASAN-PAISA-project\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csproj.GenerateResource.Cache
+C:\Users\Tania\Desktop\4th sem\OOAD lab\New folder\Micro-Bank-ASAN-PAISA-project\WindowsFormsApplication2\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe.config
+C:\Users\Tania\Desktop\4th sem\OOAD lab\New folder\Micro-Bank-ASAN-PAISA-project\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.exe
+C:\Users\Tania\Desktop\4th sem\OOAD lab\New folder\Micro-Bank-ASAN-PAISA-project\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.pdb
