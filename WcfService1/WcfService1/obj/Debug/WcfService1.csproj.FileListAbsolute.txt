@@ -8,3 +8,8 @@ C:\Users\Tania\Desktop\Asan Paisa\Micro-Bank-ASAN-PAISA-project\WcfService1\WcfS
 C:\Users\Tania\Desktop\Asan Paisa\Micro-Bank-ASAN-PAISA-project\WcfService1\WcfService1\obj\Debug\WcfService1.csprojResolveAssemblyReference.cache
 C:\Users\Tania\Desktop\Asan Paisa\Micro-Bank-ASAN-PAISA-project\WcfService1\WcfService1\obj\Debug\WcfService1.dll
 C:\Users\Tania\Desktop\Asan Paisa\Micro-Bank-ASAN-PAISA-project\WcfService1\WcfService1\obj\Debug\WcfService1.pdb
+C:\Users\Tania\Desktop\New folder\Micro-Bank-ASAN-PAISA-project\WcfService1\WcfService1\bin\WcfService1.dll
+C:\Users\Tania\Desktop\New folder\Micro-Bank-ASAN-PAISA-project\WcfService1\WcfService1\bin\WcfService1.pdb
+C:\Users\Tania\Desktop\New folder\Micro-Bank-ASAN-PAISA-project\WcfService1\WcfService1\obj\Debug\WcfService1.csprojResolveAssemblyReference.cache
+C:\Users\Tania\Desktop\New folder\Micro-Bank-ASAN-PAISA-project\WcfService1\WcfService1\obj\Debug\WcfService1.dll
+C:\Users\Tania\Desktop\New folder\Micro-Bank-ASAN-PAISA-project\WcfService1\WcfService1\obj\Debug\WcfService1.pdb

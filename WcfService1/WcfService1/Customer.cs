@@ -11,6 +11,7 @@ namespace WcfService1
         string password;
         string CNIC;
         string ContactNo;
+        Account account;
         public string getusername()
         {
             return username;
