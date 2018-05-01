@@ -1,17 +1,32 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using System.Linq;
 using System.Web;
 
 namespace WcfService1
 {
+    [DataContract]
     public class Customer
     {
+        [DataMember]
         string username;
+        [DataMember]
         string password;
+        [DataMember]
         string CNIC;
+        [DataMember]
         string ContactNo;
+        [DataMember]
         Account account;
+        public Account getAccount()
+        {
+            return account;
+        }
+        public void setaccount(Account s)
+        {
+            account = s;
+        }
         public string getusername()
         {
             return username;

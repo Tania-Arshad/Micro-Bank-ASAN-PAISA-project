@@ -23,5 +23,24 @@ namespace WindowsFormsApplication2
             this.Hide();
             form.Show();
         }
+
+        private void Customer_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Selection form = new Selection();
+            this.Hide();
+            form.Show();
+        }
+
+        private void cmdMoney_Click(object sender, EventArgs e)
+        {
+            Receiving form = new Receiving();
+            form.Show();
+            this.Hide();
+        }
     }
 }

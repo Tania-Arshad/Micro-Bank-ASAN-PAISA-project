@@ -51,6 +51,7 @@
             this.cmdData.TabIndex = 1;
             this.cmdData.Text = "Data";
             this.cmdData.UseVisualStyleBackColor = true;
+            this.cmdData.Click += new System.EventHandler(this.cmdData_Click);
             // 
             // lnkSignOut
             // 

@@ -18,3 +18,8 @@ C:\Users\Tania\Desktop\4th sem\OOAD lab\New folder\Micro-Bank-ASAN-PAISA-project
 C:\Users\Tania\Desktop\4th sem\OOAD lab\New folder\Micro-Bank-ASAN-PAISA-project\WcfService1\WcfService1\obj\Debug\WcfService1.csprojResolveAssemblyReference.cache
 C:\Users\Tania\Desktop\4th sem\OOAD lab\New folder\Micro-Bank-ASAN-PAISA-project\WcfService1\WcfService1\obj\Debug\WcfService1.dll
 C:\Users\Tania\Desktop\4th sem\OOAD lab\New folder\Micro-Bank-ASAN-PAISA-project\WcfService1\WcfService1\obj\Debug\WcfService1.pdb
+C:\Users\Tania\Desktop\4th sem\OOAD lab\New folder (2)\Micro-Bank-ASAN-PAISA-project\WcfService1\WcfService1\bin\WcfService1.dll
+C:\Users\Tania\Desktop\4th sem\OOAD lab\New folder (2)\Micro-Bank-ASAN-PAISA-project\WcfService1\WcfService1\bin\WcfService1.pdb
+C:\Users\Tania\Desktop\4th sem\OOAD lab\New folder (2)\Micro-Bank-ASAN-PAISA-project\WcfService1\WcfService1\obj\Debug\WcfService1.csprojResolveAssemblyReference.cache
+C:\Users\Tania\Desktop\4th sem\OOAD lab\New folder (2)\Micro-Bank-ASAN-PAISA-project\WcfService1\WcfService1\obj\Debug\WcfService1.dll
+C:\Users\Tania\Desktop\4th sem\OOAD lab\New folder (2)\Micro-Bank-ASAN-PAISA-project\WcfService1\WcfService1\obj\Debug\WcfService1.pdb

@@ -35,5 +35,12 @@ namespace WindowsFormsApplication2
             this.Hide();
             form1.Show();
         }
+
+        private void cmdData_Click(object sender, EventArgs e)
+        {
+            View_Customer_Info View = new View_Customer_Info();
+            View.Show();
+            this.Hide();
+        }
     }
 }

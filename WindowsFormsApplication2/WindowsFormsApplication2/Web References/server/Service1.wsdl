@@ -7,6 +7,12 @@
       <xsd:import schemaLocation="http://localhost:50736/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WcfService1" />
     </xsd:schema>
   </wsdl:types>
+  <wsdl:message name="IService1_ListOfCustomers_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListOfCustomers" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ListOfCustomers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListOfCustomersResponse" />
+  </wsdl:message>
   <wsdl:message name="IService1_IsValidCustomer_InputMessage">
     <wsdl:part name="parameters" element="tns:IsValidCustomer" />
   </wsdl:message>
@@ -31,6 +37,18 @@
   <wsdl:message name="IService1_GetData_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetDataResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_make_transaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:make_transaction" />
+  </wsdl:message>
+  <wsdl:message name="IService1_make_transaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:make_transactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_recieve_money_via_pin_InputMessage">
+    <wsdl:part name="parameters" element="tns:recieve_money_via_pin" />
+  </wsdl:message>
+  <wsdl:message name="IService1_recieve_money_via_pin_OutputMessage">
+    <wsdl:part name="parameters" element="tns:recieve_money_via_pinResponse" />
+  </wsdl:message>
   <wsdl:message name="IService1_GetDataUsingDataContract_InputMessage">
     <wsdl:part name="parameters" element="tns:GetDataUsingDataContract" />
   </wsdl:message>
@@ -38,6 +56,10 @@
     <wsdl:part name="parameters" element="tns:GetDataUsingDataContractResponse" />
   </wsdl:message>
   <wsdl:portType name="IService1">
+    <wsdl:operation name="ListOfCustomers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ListOfCustomers" message="tns:IService1_ListOfCustomers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ListOfCustomersResponse" message="tns:IService1_ListOfCustomers_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="IsValidCustomer">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/IsValidCustomer" message="tns:IService1_IsValidCustomer_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/IsValidCustomerResponse" message="tns:IService1_IsValidCustomer_OutputMessage" />
@@ -54,6 +76,14 @@
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetData" message="tns:IService1_GetData_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataResponse" message="tns:IService1_GetData_OutputMessage" />
     </wsdl:operation>
+    <wsdl:operation name="make_transaction">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/make_transaction" message="tns:IService1_make_transaction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/make_transactionResponse" message="tns:IService1_make_transaction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="recieve_money_via_pin">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/recieve_money_via_pin" message="tns:IService1_recieve_money_via_pin_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/recieve_money_via_pinResponse" message="tns:IService1_recieve_money_via_pin_OutputMessage" />
+    </wsdl:operation>
     <wsdl:operation name="GetDataUsingDataContract">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContract" message="tns:IService1_GetDataUsingDataContract_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/GetDataUsingDataContractResponse" message="tns:IService1_GetDataUsingDataContract_OutputMessage" />
@@ -61,6 +91,15 @@
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ListOfCustomers">
+      <soap:operation soapAction="http://tempuri.org/IService1/ListOfCustomers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
     <wsdl:operation name="IsValidCustomer">
       <soap:operation soapAction="http://tempuri.org/IService1/IsValidCustomer" style="document" />
       <wsdl:input>
@@ -90,6 +129,24 @@
     </wsdl:operation>
     <wsdl:operation name="GetData">
       <soap:operation soapAction="http://tempuri.org/IService1/GetData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="make_transaction">
+      <soap:operation soapAction="http://tempuri.org/IService1/make_transaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="recieve_money_via_pin">
+      <soap:operation soapAction="http://tempuri.org/IService1/recieve_money_via_pin" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

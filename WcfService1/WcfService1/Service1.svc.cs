@@ -25,8 +25,30 @@ namespace WcfService1
             }
             return found;
         }
+        public void make_transaction(string pin, string amount)
+        {
+            Transaction_Via_Pin tr = new Transaction_Via_Pin();
+            tr.setamount(amount);
+            tr.setpin(pin);
+            TransactionViaPinDL.Transaction.Add(tr);
+        }
+        public string recieve_money_via_pin(string pin)
+        {
+            foreach (Transaction_Via_Pin p in TransactionViaPinDL.Transaction)
+            {
+                if (pin == p.getPin())
+                {
+                    return p.getamount();
+                }
+            }
+            return "not valid pin";
+        }
 
-
+        public List<Customer> ListOfCustomers()
+        {
+            List<Customer> cus = CustomerDL.Customers;
+            return cus;
+        }
         public void registerUser(string username, string password, string CNIC, string ContactNo)
         {
             Customer customer = new Customer();

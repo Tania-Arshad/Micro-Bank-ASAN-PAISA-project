@@ -13,6 +13,8 @@ namespace WcfService1
     public interface IService1
     {
         [OperationContract]
+        List<Customer> ListOfCustomers();
+        [OperationContract]
         bool IsValidCustomer(string UserName, String Password);
         [OperationContract]
         void registerUser(string username, string password, string CNIC, string ContactNo);
@@ -20,7 +22,10 @@ namespace WcfService1
         bool IsValid(string username, string password);
         [OperationContract]
         string GetData(int value);
-
+        [OperationContract]
+        void make_transaction(string pin, string amount);
+        [OperationContract]
+        string recieve_money_via_pin(string pin);
         [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
 

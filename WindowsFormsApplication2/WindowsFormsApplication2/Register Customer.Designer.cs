@@ -38,6 +38,7 @@
             this.ContactNo = new System.Windows.Forms.Label();
             this.Register = new System.Windows.Forms.Button();
             this.lnkLogin = new System.Windows.Forms.LinkLabel();
+            this.lnkGoBack = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // txtUserName
@@ -125,11 +126,23 @@
             this.lnkLogin.Text = "Login";
             this.lnkLogin.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkLogin_LinkClicked);
             // 
+            // lnkGoBack
+            // 
+            this.lnkGoBack.AutoSize = true;
+            this.lnkGoBack.Location = new System.Drawing.Point(23, 217);
+            this.lnkGoBack.Name = "lnkGoBack";
+            this.lnkGoBack.Size = new System.Drawing.Size(49, 13);
+            this.lnkGoBack.TabIndex = 10;
+            this.lnkGoBack.TabStop = true;
+            this.lnkGoBack.Text = "Go Back";
+            this.lnkGoBack.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkGoBack_LinkClicked);
+            // 
             // Register_Customer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.lnkGoBack);
             this.Controls.Add(this.lnkLogin);
             this.Controls.Add(this.Register);
             this.Controls.Add(this.ContactNo);
@@ -159,5 +172,6 @@
         private System.Windows.Forms.Label ContactNo;
         private System.Windows.Forms.Button Register;
         private System.Windows.Forms.LinkLabel lnkLogin;
+        private System.Windows.Forms.LinkLabel lnkGoBack;
     }
 }
