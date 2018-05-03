@@ -23,5 +23,12 @@ namespace WindowsFormsApplication2
             this.Hide();
             form.Show();
         }
+
+        private void btnTrsactionviaaccount_Click(object sender, EventArgs e)
+        {
+            Transaction_via_account form = new Transaction_via_account();
+            form.Show();
+            this.Hide();
+        }
     }
 }

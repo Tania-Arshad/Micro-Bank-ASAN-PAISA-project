@@ -53,3 +53,22 @@ C:\Users\Tania\Desktop\4th sem\OOAD lab\New folder (2)\Micro-Bank-ASAN-PAISA-pro
 C:\Users\Tania\Desktop\4th sem\OOAD lab\New folder (2)\Micro-Bank-ASAN-PAISA-project\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Pin.resources
 C:\Users\Tania\Desktop\4th sem\OOAD lab\New folder (2)\Micro-Bank-ASAN-PAISA-project\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Selection.resources
 C:\Users\Tania\Desktop\4th sem\OOAD lab\New folder (2)\Micro-Bank-ASAN-PAISA-project\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Receiving.resources
+C:\Users\Aneesa Amjad\Desktop\New folder\Micro-Bank-ASAN-PAISA-project\WindowsFormsApplication2\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe.config
+C:\Users\Aneesa Amjad\Desktop\New folder\Micro-Bank-ASAN-PAISA-project\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.exe
+C:\Users\Aneesa Amjad\Desktop\New folder\Micro-Bank-ASAN-PAISA-project\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.pdb
+C:\Users\Aneesa Amjad\Desktop\New folder\Micro-Bank-ASAN-PAISA-project\WindowsFormsApplication2\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe
+C:\Users\Aneesa Amjad\Desktop\New folder\Micro-Bank-ASAN-PAISA-project\WindowsFormsApplication2\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.pdb
+C:\Users\Aneesa Amjad\Desktop\New folder\Micro-Bank-ASAN-PAISA-project\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csprojResolveAssemblyReference.cache
+C:\Users\Aneesa Amjad\Desktop\New folder\Micro-Bank-ASAN-PAISA-project\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Customer_Login.resources
+C:\Users\Aneesa Amjad\Desktop\New folder\Micro-Bank-ASAN-PAISA-project\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Customer.resources
+C:\Users\Aneesa Amjad\Desktop\New folder\Micro-Bank-ASAN-PAISA-project\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.adminLogin.resources
+C:\Users\Aneesa Amjad\Desktop\New folder\Micro-Bank-ASAN-PAISA-project\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Admin.resources
+C:\Users\Aneesa Amjad\Desktop\New folder\Micro-Bank-ASAN-PAISA-project\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Pin.resources
+C:\Users\Aneesa Amjad\Desktop\New folder\Micro-Bank-ASAN-PAISA-project\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Properties.Resources.resources
+C:\Users\Aneesa Amjad\Desktop\New folder\Micro-Bank-ASAN-PAISA-project\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Receiving.resources
+C:\Users\Aneesa Amjad\Desktop\New folder\Micro-Bank-ASAN-PAISA-project\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Register_Customer.resources
+C:\Users\Aneesa Amjad\Desktop\New folder\Micro-Bank-ASAN-PAISA-project\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Selection.resources
+C:\Users\Aneesa Amjad\Desktop\New folder\Micro-Bank-ASAN-PAISA-project\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.View_Customer_Info.resources
+C:\Users\Aneesa Amjad\Desktop\New folder\Micro-Bank-ASAN-PAISA-project\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csproj.GenerateResource.Cache
+C:\Users\Aneesa Amjad\Desktop\New folder\Micro-Bank-ASAN-PAISA-project\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Transaction_via_account.resources
+C:\Users\Aneesa Amjad\Desktop\New folder\Micro-Bank-ASAN-PAISA-project\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.viewTransaction.resources

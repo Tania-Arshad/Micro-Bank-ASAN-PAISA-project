@@ -26,7 +26,7 @@ namespace WindowsFormsApplication2
             }
             else
             {
-                server.registerUser(txtUserName.Text, txtPassword.Text, txtCNIC.Text, txtContactNo.Text);
+                server.registerUser(txtUserName.Text, txtPassword.Text, txtCNIC.Text, txtContactNo.Text,txtAccount.Text,txtAmount.Text);
                 MessageBox.Show("user registered");
             }
         }

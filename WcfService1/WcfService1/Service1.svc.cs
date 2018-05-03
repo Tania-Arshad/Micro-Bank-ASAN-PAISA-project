@@ -49,13 +49,17 @@ namespace WcfService1
             List<Customer> cus = CustomerDL.Customers;
             return cus;
         }
-        public void registerUser(string username, string password, string CNIC, string ContactNo)
+        public void registerUser(string username, string password, string CNIC, string ContactNo,string account,string amount)
         {
             Customer customer = new Customer();
             customer.setusername(username);
             customer.setpassword(password);
             customer.setContactNo(ContactNo);
             customer.setCNIC(CNIC);
+            Account a = new Account();
+            a.SetAccount_no(account);
+            a.SetAmount(int.Parse(amount));
+            customer.setaccount(a);
             CustomerDL.Customers.Add(customer);
         }
         public bool IsValid(string username, string password)
@@ -69,6 +73,31 @@ namespace WcfService1
             {
                 return false;
             }
+        }
+        public void TransactionViaAccount(string debitor, string creditor,string amount)
+        {
+            foreach (Customer c in CustomerDL.Customers)
+            {
+                if (debitor == c.getAccount().GetAccount_no())
+                {
+                    c.getAccount().SetAmount(c.getAccount().GetAmount() - int.Parse(amount));
+                }
+                if (creditor == c.getAccount().GetAccount_no())
+                {
+                    c.getAccount().SetAmount(c.getAccount().GetAmount() + int.Parse(amount));
+                }
+            }
+
+        }
+        public List<Transaction_via_Account> transactionsviaAccount()
+        {
+            List<Transaction_via_Account> t = TransactionViaAccount_DL.Transaction;
+            return t;
+        }
+        public List<Transaction_Via_Pin> transactionsviaPin()
+        {
+            List<Transaction_Via_Pin> t = TransactionViaPinDL.Transaction;
+            return t;
         }
         public string GetData(int value)
         {

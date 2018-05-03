@@ -17,13 +17,19 @@ namespace WcfService1
         [OperationContract]
         bool IsValidCustomer(string UserName, String Password);
         [OperationContract]
-        void registerUser(string username, string password, string CNIC, string ContactNo);
+        void registerUser(string username, string password, string CNIC, string ContactNo, string account, string amount);
         [OperationContract]
         bool IsValid(string username, string password);
         [OperationContract]
         string GetData(int value);
         [OperationContract]
         void make_transaction(string pin, string amount);
+        [OperationContract]
+        void TransactionViaAccount(string debitor, string creditor, string amount);
+        [OperationContract]
+        List<Transaction_Via_Pin> transactionsviaPin();
+        [OperationContract]
+        List<Transaction_via_Account> transactionsviaAccount();
         [OperationContract]
         string recieve_money_via_pin(string pin);
         [OperationContract]

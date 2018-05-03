@@ -50,6 +50,7 @@
             this.btnTrsactionviaaccount.TabIndex = 1;
             this.btnTrsactionviaaccount.Text = "Transaction via Account";
             this.btnTrsactionviaaccount.UseVisualStyleBackColor = true;
+            this.btnTrsactionviaaccount.Click += new System.EventHandler(this.btnTrsactionviaaccount_Click);
             // 
             // Selection
             // 

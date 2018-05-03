@@ -96,11 +96,23 @@
     <Compile Include="Selection.Designer.cs">
       <DependentUpon>Selection.cs</DependentUpon>
     </Compile>
+    <Compile Include="Transaction via account.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction via account.Designer.cs">
+      <DependentUpon>Transaction via account.cs</DependentUpon>
+    </Compile>
     <Compile Include="View Customer Info.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="View Customer Info.Designer.cs">
       <DependentUpon>View Customer Info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="viewTransaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="viewTransaction.Designer.cs">
+      <DependentUpon>viewTransaction.cs</DependentUpon>
     </Compile>
     <Compile Include="Web References\server\Reference.cs">
       <AutoGen>True</AutoGen>
@@ -140,8 +152,14 @@
     <EmbeddedResource Include="Selection.resx">
       <DependentUpon>Selection.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Transaction via account.resx">
+      <DependentUpon>Transaction via account.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View Customer Info.resx">
       <DependentUpon>View Customer Info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="viewTransaction.resx">
+      <DependentUpon>viewTransaction.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -171,6 +189,12 @@
     </None>
     <None Include="Web References\server\Service11.xsd">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="Web References\server\Transaction_via_Account.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\server\Transaction_Via_Pin.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>

@@ -20,6 +20,30 @@
     <xs:sequence />
   </xs:complexType>
   <xs:element name="Account" nillable="true" type="tns:Account" />
+  <xs:complexType name="ArrayOfTransaction_Via_Pin">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Transaction_Via_Pin" nillable="true" type="tns:Transaction_Via_Pin" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTransaction_Via_Pin" nillable="true" type="tns:ArrayOfTransaction_Via_Pin" />
+  <xs:complexType name="Transaction_Via_Pin">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="Transaction_Via_Pin" nillable="true" type="tns:Transaction_Via_Pin" />
+  <xs:complexType name="ArrayOfTransaction_via_Account">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Transaction_via_Account" nillable="true" type="tns:Transaction_via_Account" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTransaction_via_Account" nillable="true" type="tns:ArrayOfTransaction_via_Account" />
+  <xs:complexType name="Transaction_via_Account">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Amount" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Creditor_Account" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Debitor_Account" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Transaction_via_Account" nillable="true" type="tns:Transaction_via_Account" />
   <xs:complexType name="CompositeType">
     <xs:sequence>
       <xs:element minOccurs="0" name="BoolValue" type="xs:boolean" />

@@ -42,5 +42,12 @@ namespace WindowsFormsApplication2
             form.Show();
             this.Hide();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            viewTransaction form = new viewTransaction();
+            this.Hide();
+            form.Show();
+        }
     }
 }

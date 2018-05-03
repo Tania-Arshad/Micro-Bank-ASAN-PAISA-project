@@ -23,7 +23,7 @@ namespace WindowsFormsApplication2.server {
     
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Web.Services.WebServiceBindingAttribute(Name="BasicHttpBinding_IService1", Namespace="http://tempuri.org/")]
@@ -40,6 +40,12 @@ namespace WindowsFormsApplication2.server {
         private System.Threading.SendOrPostCallback GetDataOperationCompleted;
         
         private System.Threading.SendOrPostCallback make_transactionOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback TransactionViaAccountOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback transactionsviaPinOperationCompleted;
+        
+        private System.Threading.SendOrPostCallback transactionsviaAccountOperationCompleted;
         
         private System.Threading.SendOrPostCallback recieve_money_via_pinOperationCompleted;
         
@@ -100,6 +106,15 @@ namespace WindowsFormsApplication2.server {
         
         /// <remarks/>
         public event make_transactionCompletedEventHandler make_transactionCompleted;
+        
+        /// <remarks/>
+        public event TransactionViaAccountCompletedEventHandler TransactionViaAccountCompleted;
+        
+        /// <remarks/>
+        public event transactionsviaPinCompletedEventHandler transactionsviaPinCompleted;
+        
+        /// <remarks/>
+        public event transactionsviaAccountCompletedEventHandler transactionsviaAccountCompleted;
         
         /// <remarks/>
         public event recieve_money_via_pinCompletedEventHandler recieve_money_via_pinCompleted;
@@ -170,21 +185,23 @@ namespace WindowsFormsApplication2.server {
         
         /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/registerUser", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
-        public void registerUser([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string username, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string password, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string CNIC, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string ContactNo) {
+        public void registerUser([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string username, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string password, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string CNIC, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string ContactNo, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string account, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string amount) {
             this.Invoke("registerUser", new object[] {
                         username,
                         password,
                         CNIC,
-                        ContactNo});
+                        ContactNo,
+                        account,
+                        amount});
         }
         
         /// <remarks/>
-        public void registerUserAsync(string username, string password, string CNIC, string ContactNo) {
-            this.registerUserAsync(username, password, CNIC, ContactNo, null);
+        public void registerUserAsync(string username, string password, string CNIC, string ContactNo, string account, string amount) {
+            this.registerUserAsync(username, password, CNIC, ContactNo, account, amount, null);
         }
         
         /// <remarks/>
-        public void registerUserAsync(string username, string password, string CNIC, string ContactNo, object userState) {
+        public void registerUserAsync(string username, string password, string CNIC, string ContactNo, string account, string amount, object userState) {
             if ((this.registerUserOperationCompleted == null)) {
                 this.registerUserOperationCompleted = new System.Threading.SendOrPostCallback(this.OnregisterUserOperationCompleted);
             }
@@ -192,7 +209,9 @@ namespace WindowsFormsApplication2.server {
                         username,
                         password,
                         CNIC,
-                        ContactNo}, this.registerUserOperationCompleted, userState);
+                        ContactNo,
+                        account,
+                        amount}, this.registerUserOperationCompleted, userState);
         }
         
         private void OnregisterUserOperationCompleted(object arg) {
@@ -293,6 +312,96 @@ namespace WindowsFormsApplication2.server {
             if ((this.make_transactionCompleted != null)) {
                 System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
                 this.make_transactionCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/TransactionViaAccount", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void TransactionViaAccount([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string debitor, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string creditor, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string amount) {
+            this.Invoke("TransactionViaAccount", new object[] {
+                        debitor,
+                        creditor,
+                        amount});
+        }
+        
+        /// <remarks/>
+        public void TransactionViaAccountAsync(string debitor, string creditor, string amount) {
+            this.TransactionViaAccountAsync(debitor, creditor, amount, null);
+        }
+        
+        /// <remarks/>
+        public void TransactionViaAccountAsync(string debitor, string creditor, string amount, object userState) {
+            if ((this.TransactionViaAccountOperationCompleted == null)) {
+                this.TransactionViaAccountOperationCompleted = new System.Threading.SendOrPostCallback(this.OnTransactionViaAccountOperationCompleted);
+            }
+            this.InvokeAsync("TransactionViaAccount", new object[] {
+                        debitor,
+                        creditor,
+                        amount}, this.TransactionViaAccountOperationCompleted, userState);
+        }
+        
+        private void OnTransactionViaAccountOperationCompleted(object arg) {
+            if ((this.TransactionViaAccountCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.TransactionViaAccountCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/transactionsviaPin", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/WcfService1")]
+        public Transaction_Via_Pin[] transactionsviaPin() {
+            object[] results = this.Invoke("transactionsviaPin", new object[0]);
+            return ((Transaction_Via_Pin[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void transactionsviaPinAsync() {
+            this.transactionsviaPinAsync(null);
+        }
+        
+        /// <remarks/>
+        public void transactionsviaPinAsync(object userState) {
+            if ((this.transactionsviaPinOperationCompleted == null)) {
+                this.transactionsviaPinOperationCompleted = new System.Threading.SendOrPostCallback(this.OntransactionsviaPinOperationCompleted);
+            }
+            this.InvokeAsync("transactionsviaPin", new object[0], this.transactionsviaPinOperationCompleted, userState);
+        }
+        
+        private void OntransactionsviaPinOperationCompleted(object arg) {
+            if ((this.transactionsviaPinCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.transactionsviaPinCompleted(this, new transactionsviaPinCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/transactionsviaAccount", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        [return: System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        [return: System.Xml.Serialization.XmlArrayItemAttribute(Namespace="http://schemas.datacontract.org/2004/07/WcfService1")]
+        public Transaction_via_Account[] transactionsviaAccount() {
+            object[] results = this.Invoke("transactionsviaAccount", new object[0]);
+            return ((Transaction_via_Account[])(results[0]));
+        }
+        
+        /// <remarks/>
+        public void transactionsviaAccountAsync() {
+            this.transactionsviaAccountAsync(null);
+        }
+        
+        /// <remarks/>
+        public void transactionsviaAccountAsync(object userState) {
+            if ((this.transactionsviaAccountOperationCompleted == null)) {
+                this.transactionsviaAccountOperationCompleted = new System.Threading.SendOrPostCallback(this.OntransactionsviaAccountOperationCompleted);
+            }
+            this.InvokeAsync("transactionsviaAccount", new object[0], this.transactionsviaAccountOperationCompleted, userState);
+        }
+        
+        private void OntransactionsviaAccountOperationCompleted(object arg) {
+            if ((this.transactionsviaAccountCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.transactionsviaAccountCompleted(this, new transactionsviaAccountCompletedEventArgs(invokeArgs.Results, invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
             }
         }
         
@@ -506,11 +615,68 @@ namespace WindowsFormsApplication2.server {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/WcfService1")]
+    public partial class Transaction_via_Account {
+        
+        private string amountField;
+        
+        private string creditor_AccountField;
+        
+        private string debitor_AccountField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Amount {
+            get {
+                return this.amountField;
+            }
+            set {
+                this.amountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Creditor_Account {
+            get {
+                return this.creditor_AccountField;
+            }
+            set {
+                this.creditor_AccountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
+        public string Debitor_Account {
+            get {
+                return this.debitor_AccountField;
+            }
+            set {
+                this.debitor_AccountField = value;
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/WcfService1")]
+    public partial class Transaction_Via_Pin {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void ListOfCustomersCompletedEventHandler(object sender, ListOfCustomersCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class ListOfCustomersCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -532,11 +698,11 @@ namespace WindowsFormsApplication2.server {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void IsValidCustomerCompletedEventHandler(object sender, IsValidCustomerCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class IsValidCustomerCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -566,15 +732,15 @@ namespace WindowsFormsApplication2.server {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void registerUserCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void IsValidCompletedEventHandler(object sender, IsValidCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class IsValidCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -604,11 +770,11 @@ namespace WindowsFormsApplication2.server {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void GetDataCompletedEventHandler(object sender, GetDataCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GetDataCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -630,15 +796,71 @@ namespace WindowsFormsApplication2.server {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void make_transactionCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    public delegate void TransactionViaAccountCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    public delegate void transactionsviaPinCompletedEventHandler(object sender, transactionsviaPinCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class transactionsviaPinCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal transactionsviaPinCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public Transaction_Via_Pin[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((Transaction_Via_Pin[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    public delegate void transactionsviaAccountCompletedEventHandler(object sender, transactionsviaAccountCompletedEventArgs e);
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    public partial class transactionsviaAccountCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
+        
+        private object[] results;
+        
+        internal transactionsviaAccountCompletedEventArgs(object[] results, System.Exception exception, bool cancelled, object userState) : 
+                base(exception, cancelled, userState) {
+            this.results = results;
+        }
+        
+        /// <remarks/>
+        public Transaction_via_Account[] Result {
+            get {
+                this.RaiseExceptionIfNecessary();
+                return ((Transaction_via_Account[])(this.results[0]));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void recieve_money_via_pinCompletedEventHandler(object sender, recieve_money_via_pinCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class recieve_money_via_pinCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
@@ -660,11 +882,11 @@ namespace WindowsFormsApplication2.server {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     public delegate void GetDataUsingDataContractCompletedEventHandler(object sender, GetDataUsingDataContractCompletedEventArgs e);
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2558.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     public partial class GetDataUsingDataContractCompletedEventArgs : System.ComponentModel.AsyncCompletedEventArgs {
