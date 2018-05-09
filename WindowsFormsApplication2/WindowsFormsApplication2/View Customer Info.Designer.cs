@@ -32,6 +32,7 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.search = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.lnkBack = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -72,11 +73,23 @@
             this.dataGridView2.TabIndex = 4;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
+            // lnkBack
+            // 
+            this.lnkBack.AutoSize = true;
+            this.lnkBack.Location = new System.Drawing.Point(458, 29);
+            this.lnkBack.Name = "lnkBack";
+            this.lnkBack.Size = new System.Drawing.Size(49, 13);
+            this.lnkBack.TabIndex = 5;
+            this.lnkBack.TabStop = true;
+            this.lnkBack.Text = "Go Back";
+            this.lnkBack.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkBack_LinkClicked);
+            // 
             // View_Customer_Info
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(566, 261);
+            this.Controls.Add(this.lnkBack);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.search);
             this.Controls.Add(this.comboBox1);
@@ -85,6 +98,7 @@
             this.Text = "View_Customer_Info";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -94,5 +108,6 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button search;
         private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.LinkLabel lnkBack;
     }
 }

@@ -30,5 +30,10 @@ namespace WindowsFormsApplication2
             form.Show();
             this.Hide();
         }
+
+        private void lnkGoBack_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+           
+        }
     }
 }

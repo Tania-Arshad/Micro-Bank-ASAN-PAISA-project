@@ -35,6 +35,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.lnkGoBack = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // txtDAccount
@@ -96,11 +97,23 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "Enter Amount";
             // 
+            // lnkGoBack
+            // 
+            this.lnkGoBack.AutoSize = true;
+            this.lnkGoBack.Location = new System.Drawing.Point(13, 193);
+            this.lnkGoBack.Name = "lnkGoBack";
+            this.lnkGoBack.Size = new System.Drawing.Size(49, 13);
+            this.lnkGoBack.TabIndex = 7;
+            this.lnkGoBack.TabStop = true;
+            this.lnkGoBack.Text = "Go Back";
+            this.lnkGoBack.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lnkGoBack_LinkClicked);
+            // 
             // Transaction_via_account
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.lnkGoBack);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -125,5 +138,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.LinkLabel lnkGoBack;
     }
 }

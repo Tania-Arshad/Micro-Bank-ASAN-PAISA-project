@@ -33,5 +33,12 @@ namespace WindowsFormsApplication2
         {
 
         }
+
+        private void lnkGoBack_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Customer form = new Customer();
+            this.Hide();
+            form.Show();
+        }
     }
 }

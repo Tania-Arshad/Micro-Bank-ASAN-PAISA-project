@@ -33,6 +33,7 @@ namespace WindowsFormsApplication2
         {
             LoanView form = new LoanView();
             form.Show();
+            this.Hide();
         }
     }
 }

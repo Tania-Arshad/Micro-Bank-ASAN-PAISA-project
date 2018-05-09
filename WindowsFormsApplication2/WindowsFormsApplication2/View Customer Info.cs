@@ -40,5 +40,12 @@ namespace WindowsFormsApplication2
         {
 
         }
+
+        private void lnkBack_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Admin form = new Admin();
+            this.Hide();
+            form.Show();
+        }
     }
 }
