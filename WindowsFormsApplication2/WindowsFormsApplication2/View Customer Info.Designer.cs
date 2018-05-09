@@ -61,6 +61,7 @@
             this.search.TabIndex = 2;
             this.search.Text = "Search";
             this.search.UseVisualStyleBackColor = true;
+            this.search.Click += new System.EventHandler(this.search_Click);
             // 
             // dataGridView2
             // 

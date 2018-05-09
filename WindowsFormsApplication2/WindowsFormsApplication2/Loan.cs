@@ -28,5 +28,11 @@ namespace WindowsFormsApplication2
             srvc.Loan(txtamount.Text, txtdate.Text);
             MessageBox.Show("amount has been transfered to your account");
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            LoanView form = new LoanView();
+            form.Show();
+        }
     }
 }

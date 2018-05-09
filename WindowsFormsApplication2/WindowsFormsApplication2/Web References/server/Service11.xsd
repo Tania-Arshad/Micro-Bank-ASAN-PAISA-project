@@ -13,6 +13,18 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="View_Loan">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="View_LoanResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WcfService1" minOccurs="0" name="View_LoanResult" nillable="true" type="q2:ArrayOfLoan" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
   <xs:element name="IsValidCustomer">
     <xs:complexType>
       <xs:sequence>
@@ -109,7 +121,7 @@
   <xs:element name="transactionsviaPinResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WcfService1" minOccurs="0" name="transactionsviaPinResult" nillable="true" type="q2:ArrayOfTransaction_Via_Pin" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WcfService1" minOccurs="0" name="transactionsviaPinResult" nillable="true" type="q3:ArrayOfTransaction_Via_Pin" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -121,7 +133,7 @@
   <xs:element name="transactionsviaAccountResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/WcfService1" minOccurs="0" name="transactionsviaAccountResult" nillable="true" type="q3:ArrayOfTransaction_via_Account" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WcfService1" minOccurs="0" name="transactionsviaAccountResult" nillable="true" type="q4:ArrayOfTransaction_via_Account" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
@@ -155,14 +167,14 @@
   <xs:element name="GetDataUsingDataContract">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/WcfService1" minOccurs="0" name="composite" nillable="true" type="q4:CompositeType" />
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/WcfService1" minOccurs="0" name="composite" nillable="true" type="q5:CompositeType" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="GetDataUsingDataContractResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/WcfService1" minOccurs="0" name="GetDataUsingDataContractResult" nillable="true" type="q5:CompositeType" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/WcfService1" minOccurs="0" name="GetDataUsingDataContractResult" nillable="true" type="q6:CompositeType" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

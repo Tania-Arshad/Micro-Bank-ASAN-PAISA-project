@@ -27,6 +27,11 @@ namespace WcfService1
             }
             return found;
         }
+        public List<Loan> View_Loan()
+        {
+            List<Loan> l = cus.loans;
+            return l;
+        }
         public void make_transaction(string pin, string amount)
         {
             Transaction_Via_Pin tr = new Transaction_Via_Pin();

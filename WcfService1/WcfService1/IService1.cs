@@ -15,6 +15,8 @@ namespace WcfService1
         [OperationContract]
         List<Customer> ListOfCustomers();
         [OperationContract]
+        List<Loan> View_Loan();
+        [OperationContract]
         bool IsValidCustomer(string UserName, String Password);
         [OperationContract]
         void registerUser(string username, string password, string CNIC, string ContactNo, string account, string amount);
