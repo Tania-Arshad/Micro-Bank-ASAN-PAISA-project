@@ -11,6 +11,7 @@
       <xs:element minOccurs="0" name="CNIC" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="ContactNo" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="account" nillable="true" type="tns:Account" />
+      <xs:element minOccurs="0" name="loans" nillable="true" type="tns:ArrayOfLoan" />
       <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="username" nillable="true" type="xs:string" />
     </xs:sequence>
@@ -20,6 +21,16 @@
     <xs:sequence />
   </xs:complexType>
   <xs:element name="Account" nillable="true" type="tns:Account" />
+  <xs:complexType name="ArrayOfLoan">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Loan" nillable="true" type="tns:Loan" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfLoan" nillable="true" type="tns:ArrayOfLoan" />
+  <xs:complexType name="Loan">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="Loan" nillable="true" type="tns:Loan" />
   <xs:complexType name="ArrayOfTransaction_Via_Pin">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="Transaction_Via_Pin" nillable="true" type="tns:Transaction_Via_Pin" />

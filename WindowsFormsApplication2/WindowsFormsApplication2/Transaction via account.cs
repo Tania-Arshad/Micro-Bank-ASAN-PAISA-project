@@ -23,5 +23,15 @@ namespace WindowsFormsApplication2
             srvc.TransactionViaAccount(txtDAccount.Text, txtCAccount.Text, txtAmount.Text);
             MessageBox.Show("completed");
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Transaction_via_account_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

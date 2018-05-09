@@ -34,5 +34,10 @@ namespace WindowsFormsApplication2
                     MessageBox.Show ("InValid Customer");
                 }
         }
+
+        private void Customer_Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

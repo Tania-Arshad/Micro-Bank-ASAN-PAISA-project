@@ -102,6 +102,7 @@
             this.Controls.Add(this.txtPin);
             this.Name = "Receiving";
             this.Text = "Receiving Person";
+            this.Load += new System.EventHandler(this.Receiving_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

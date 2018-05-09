@@ -39,6 +39,11 @@ namespace WindowsFormsApplication2
             source.DataSource = s;
             dataGridView1.DataSource = source;
         }
+
+        private void viewTransaction_Load(object sender, EventArgs e)
+        {
+
+        }
         }
     }
 

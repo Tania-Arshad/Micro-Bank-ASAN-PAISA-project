@@ -49,5 +49,12 @@ namespace WindowsFormsApplication2
             this.Hide();
             form.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Loan form = new Loan();
+            this.Hide();
+            form.Show();
+        }
     }
 }

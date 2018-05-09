@@ -72,3 +72,4 @@ C:\Users\Aneesa Amjad\Desktop\New folder\Micro-Bank-ASAN-PAISA-project\WindowsFo
 C:\Users\Aneesa Amjad\Desktop\New folder\Micro-Bank-ASAN-PAISA-project\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.csproj.GenerateResource.Cache
 C:\Users\Aneesa Amjad\Desktop\New folder\Micro-Bank-ASAN-PAISA-project\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Transaction_via_account.resources
 C:\Users\Aneesa Amjad\Desktop\New folder\Micro-Bank-ASAN-PAISA-project\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.viewTransaction.resources
+C:\Users\Aneesa Amjad\Desktop\New folder\Micro-Bank-ASAN-PAISA-project\WindowsFormsApplication2\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.Loan.resources

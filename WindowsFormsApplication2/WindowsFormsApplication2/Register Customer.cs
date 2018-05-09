@@ -44,5 +44,10 @@ namespace WindowsFormsApplication2
             this.Hide();
             form.Show();
         }
+
+        private void Register_Customer_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

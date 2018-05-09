@@ -49,6 +49,8 @@ namespace WindowsFormsApplication2.server {
         
         private System.Threading.SendOrPostCallback recieve_money_via_pinOperationCompleted;
         
+        private System.Threading.SendOrPostCallback LoanOperationCompleted;
+        
         private System.Threading.SendOrPostCallback GetDataUsingDataContractOperationCompleted;
         
         private bool useDefaultCredentialsSetExplicitly;
@@ -118,6 +120,9 @@ namespace WindowsFormsApplication2.server {
         
         /// <remarks/>
         public event recieve_money_via_pinCompletedEventHandler recieve_money_via_pinCompleted;
+        
+        /// <remarks/>
+        public event LoanCompletedEventHandler LoanCompleted;
         
         /// <remarks/>
         public event GetDataUsingDataContractCompletedEventHandler GetDataUsingDataContractCompleted;
@@ -436,6 +441,36 @@ namespace WindowsFormsApplication2.server {
         }
         
         /// <remarks/>
+        [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/Loan", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
+        public void Loan([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string amount, [System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] string date) {
+            this.Invoke("Loan", new object[] {
+                        amount,
+                        date});
+        }
+        
+        /// <remarks/>
+        public void LoanAsync(string amount, string date) {
+            this.LoanAsync(amount, date, null);
+        }
+        
+        /// <remarks/>
+        public void LoanAsync(string amount, string date, object userState) {
+            if ((this.LoanOperationCompleted == null)) {
+                this.LoanOperationCompleted = new System.Threading.SendOrPostCallback(this.OnLoanOperationCompleted);
+            }
+            this.InvokeAsync("Loan", new object[] {
+                        amount,
+                        date}, this.LoanOperationCompleted, userState);
+        }
+        
+        private void OnLoanOperationCompleted(object arg) {
+            if ((this.LoanCompleted != null)) {
+                System.Web.Services.Protocols.InvokeCompletedEventArgs invokeArgs = ((System.Web.Services.Protocols.InvokeCompletedEventArgs)(arg));
+                this.LoanCompleted(this, new System.ComponentModel.AsyncCompletedEventArgs(invokeArgs.Error, invokeArgs.Cancelled, invokeArgs.UserState));
+            }
+        }
+        
+        /// <remarks/>
         [System.Web.Services.Protocols.SoapDocumentMethodAttribute("http://tempuri.org/IService1/GetDataUsingDataContract", RequestNamespace="http://tempuri.org/", ResponseNamespace="http://tempuri.org/", Use=System.Web.Services.Description.SoapBindingUse.Literal, ParameterStyle=System.Web.Services.Protocols.SoapParameterStyle.Wrapped)]
         [return: System.Xml.Serialization.XmlElementAttribute(IsNullable=true)]
         public CompositeType GetDataUsingDataContract([System.Xml.Serialization.XmlElementAttribute(IsNullable=true)] CompositeType composite) {
@@ -498,6 +533,8 @@ namespace WindowsFormsApplication2.server {
         
         private Account accountField;
         
+        private Loan[] loansField;
+        
         private string passwordField;
         
         private string usernameField;
@@ -532,6 +569,17 @@ namespace WindowsFormsApplication2.server {
             }
             set {
                 this.accountField = value;
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlArrayAttribute(IsNullable=true)]
+        public Loan[] loans {
+            get {
+                return this.loansField;
+            }
+            set {
+                this.loansField = value;
             }
         }
         
@@ -669,6 +717,15 @@ namespace WindowsFormsApplication2.server {
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/WcfService1")]
     public partial class Transaction_Via_Pin {
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2612.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://schemas.datacontract.org/2004/07/WcfService1")]
+    public partial class Loan {
     }
     
     /// <remarks/>
@@ -880,6 +937,10 @@ namespace WindowsFormsApplication2.server {
             }
         }
     }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]
+    public delegate void LoanCompletedEventHandler(object sender, System.ComponentModel.AsyncCompletedEventArgs e);
     
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Web.Services", "4.7.2556.0")]

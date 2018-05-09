@@ -195,6 +195,7 @@
             this.Controls.Add(this.txtUserName);
             this.Name = "Register_Customer";
             this.Text = "Register_Customer";
+            this.Load += new System.EventHandler(this.Register_Customer_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

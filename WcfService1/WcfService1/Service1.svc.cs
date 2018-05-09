@@ -12,6 +12,7 @@ namespace WcfService1
     // NOTE: In order to launch WCF Test Client for testing this service, please select Service1.svc or Service1.svc.cs at the Solution Explorer and start debugging.
     public class Service1 : IService1
     {
+        public static Customer cus = null;
         public bool IsValidCustomer(string UserName, String Password)
         {
             bool found = false;
@@ -20,6 +21,7 @@ namespace WcfService1
                 if (s.getusername() == UserName && s.getpassword() == Password)
                 {
                     found = true;
+                    cus = s;
                     return found;
                 }
             }
@@ -87,6 +89,15 @@ namespace WcfService1
                     c.getAccount().SetAmount(c.getAccount().GetAmount() + int.Parse(amount));
                 }
             }
+
+        }
+        public void Loan(string amount, string date)
+        {
+            Loan loan = new Loan();
+            loan.SetAmount(amount);
+            loan.SetDate(date);
+            cus.loans.Add(loan);
+            cus.getAccount().SetAmount(cus.getAccount().GetAmount() + int.Parse(amount));
 
         }
         public List<Transaction_via_Account> transactionsviaAccount()

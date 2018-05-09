@@ -68,6 +68,7 @@
     <Compile Include="Admin.cs" />
     <Compile Include="Customer.cs" />
     <Compile Include="CustomerDL.cs" />
+    <Compile Include="Loan.cs" />
     <Compile Include="Service1.svc.cs">
       <DependentUpon>Service1.svc</DependentUpon>
     </Compile>

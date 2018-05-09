@@ -89,6 +89,7 @@
             this.Controls.Add(this.txtUserName);
             this.Name = "Customer_Login";
             this.Text = "Customer_Login";
+            this.Load += new System.EventHandler(this.Customer_Login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

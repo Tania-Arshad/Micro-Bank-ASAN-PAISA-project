@@ -76,6 +76,7 @@
             this.label1.Size = new System.Drawing.Size(84, 13);
             this.label1.TabIndex = 4;
             this.label1.Text = "Debitor Account";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -109,6 +110,7 @@
             this.Controls.Add(this.txtDAccount);
             this.Name = "Transaction_via_account";
             this.Text = "Transaction_via_account";
+            this.Load += new System.EventHandler(this.Transaction_via_account_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

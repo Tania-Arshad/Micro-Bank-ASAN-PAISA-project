@@ -39,5 +39,10 @@ namespace WindowsFormsApplication2
                 MessageBox.Show("transaction unsuccessfull");
             }
         }
+
+        private void Receiving_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -10,6 +10,8 @@ namespace WcfService1
     public class Customer
     {
         [DataMember]
+        public List<Loan> loans = new List<Loan>();
+        [DataMember]
         string username;
         [DataMember]
         string password;

@@ -33,6 +33,8 @@ namespace WcfService1
         [OperationContract]
         string recieve_money_via_pin(string pin);
         [OperationContract]
+        void Loan(string amount, string date);
+        [OperationContract]
         CompositeType GetDataUsingDataContract(CompositeType composite);
 
         // TODO: Add your service operations here
